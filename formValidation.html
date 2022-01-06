@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML form Validation</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        #submitBtn {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Registration Form</legend>
+        <form action="#">
+            <table>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td><input type="text" id="name" name="name" placeholder="Name" pattern="[a-zA-Z]+" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="passwd">Password</label></td>
+                    <td><input type="password" id="passwd" name="passwd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required /></td>
+                </tr>
+                <tr>
+                    <td><label for="mail">Email ID</label></td>
+                    <td><input type="email" id="mail" name="mail" placeholder="abc@def.com" /></td>
+                </tr>
+                <tr>
+                    <td><label for="mobileno">Mobile No.</label></td>
+                    <td><input type="tel" id="mobileno". placeholder="1234567890" /></td>
+                </tr>
+                <tr>
+                    <td><label for="url">GitHub Repo. Link</label></td>
+                    <td><input type="url" id="url" name="url" placeholder="https://abc.git" required/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="submitBtn"><input type="submit" name="submit" value="Register" /></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
